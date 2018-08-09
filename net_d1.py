@@ -25,3 +25,16 @@ print("获取一个应用的端口：")
 # print(socket.getservbyname('mysql'))
 # print(socket.getservbyport(3306))
 
+s = socket.socket()
+
+print("获取套接字描述符：")
+print(s.fileno())
+
+print("获得套接字类型：")
+print(s.type)
+
+print("获取套接字绑定的地址：")
+# print(s.getsockname())
+
+print("使用accept生成的套接字调用，获取该套接字对应的客户端的地址：")
+print(s.getpeername())
